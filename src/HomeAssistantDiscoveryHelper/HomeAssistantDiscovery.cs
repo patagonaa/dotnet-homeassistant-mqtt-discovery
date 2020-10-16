@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace HomeAssistantDiscoveryHelper
 {
@@ -16,6 +17,10 @@ namespace HomeAssistantDiscoveryHelper
         public string AvailabilityTopic { get; set; }
         [JsonProperty("state_topic")]
         public string StateTopic { get; set; }
+        [JsonProperty("effect_list")]
+        public IList<string> EffectList { get; set; }
+        [JsonProperty("effect_command_topic")]
+        public string EffectTopic { get; set; }
         [JsonProperty("retain")]
         public bool Retain { get; set; }
         [JsonProperty("device")]
