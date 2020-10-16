@@ -5,9 +5,9 @@ namespace HomeAssistantDiscoveryHelper
 {
     public class HomeAssistantDevice
     {
-        [JsonProperty("identifiers")]
+        [JsonProperty("identifiers", NullValueHandling = NullValueHandling.Ignore)]
         public IList<string> Identifiers { get; set; }
-        [JsonProperty("name")]
+        [JsonProperty("name", NullValueHandling = NullValueHandling.Ignore)]
         public string Name { get; set; }
     }
 }
